@@ -1,0 +1,14 @@
+version: "3"
+
+tasks:
+  run:
+    desc: Run the app
+    env:
+      GOFLAGS: -mod=mod
+    cmds:
+      - go run quick-versus.go
+
+  build:
+    desc: Build the app for current OS
+    cmds:
+      - fyne package -icon icon.png
