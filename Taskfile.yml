@@ -10,5 +10,9 @@ tasks:
 
   build:
     desc: Build the app for current OS
+    env:
+      CGO_CFLAGS: -mmacosx-version-min=10.14
+      CGO_LDFLAGS: -mmacosx-version-min=10.14
+      MACOSX_DEPLOYMENT_TARGET: 10.14
     cmds:
       - fyne package -icon icon.png
